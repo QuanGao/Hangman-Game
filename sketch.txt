@@ -1,0 +1,30 @@
+Main game mechanics.
+
+var words = [word_1, word_2, ..., word_3]
+
+
+Loop_startByPressOnAnyKey_word_1
+
+var myWord = [h, e, l, l, o]
+var dashes = [-, -, -, -, -,]
+
+if player is not repeat themselves,
+
+	If player choice is part of myWord, then replace the dash array with the player 	input. If player guesses all the words, player wins. -> proceed to next word.
+
+	If player choice is not part of remaining guesses reduced by 1. When the guesses 	goes to 0, player loses. -> proceed to next word.
+
+If player repeats themselves, nothing happens.
+Loop_ends_proceedTo_word_2
+
+ON DISPLAY
+Dashes, 
+Guesses,
+
+
+
+
+
+
+
+
