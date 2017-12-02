@@ -1,11 +1,10 @@
 
-
-
+// variables
 var words = ["hello", "you"];
 var blanks = ["-----", "---"];
 var gameStatus = 0;
-var currentWord = words[1];
-var currentBlank = blanks[1];
+var currentWord = words[0];
+var currentBlank = blanks[0];
 var wordArray = currentWord.split("");
 var blankArray = currentBlank.split("");
 var displayArray = blankArray;
@@ -13,6 +12,18 @@ var currentScore = 0;
 var lives = 5;
 var letters = [];
 
+// functions
+
+function GetIndexes (array, value) {
+	indexes = [];
+	var arr = array;
+	for (i = 0; i < array.length; i ++) {
+		var index = array.indexOf(value);
+		arr[index] = "x1z";
+			if(index !== -1) {indexes.push(index);};
+	};
+	return(indexes);
+} 
 
 
 // when key is pressed, game start.
@@ -40,7 +51,8 @@ document.onkeyup = function(event) {
 				var indexOfDash = currentDisplay.split("").indexOf("-")
 					if (indexOfDash == -1) {
 						currentScore = currentScore + 1;
-						document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
+						document.getElementById("score").innerHTML = `<p>${currentScore}</p>`
+						gameStatus = 0;
 					}
  			} else {
  				if (lives > 0) {
