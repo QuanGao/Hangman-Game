@@ -1,4 +1,4 @@
-#display {
-	height: 100px;
+#score, #display, #guessRemain, #progress, #display {
+	height: 30px;
 	border: 2px solid blue;
 }

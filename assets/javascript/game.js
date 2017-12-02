@@ -6,11 +6,11 @@ var blanks = ["-----", "---"];
 var gameStatus = 0;
 var currentWord = words[1];
 var currentBlank = blanks[1];
-var wordString = currentWord.split("");
-var blankString = currentBlank.split("");
-var displayString = blankString;
+var wordArray = currentWord.split("");
+var blankArray = currentBlank.split("");
+var displayArray = blankArray;
 var currentScore = 0;
-var lives = 20;
+var lives = 5;
 var letters = [];
 
 
@@ -18,21 +18,35 @@ var letters = [];
 // when key is pressed, game start.
 // computer chose a word and display blanks (dashes) same length as the word 
 document.onkeyup = function(event) {
+ 		
+	console.log(gameStatus)
 	if (gameStatus === 0) {
-		document.getElementById("display").innerHTML = `<h2>${currentBlank}</h2>`;
-		gameStatus = gameStatus + 1;
+		document.getElementById("display").innerHTML = `<p>${currentBlank}</p>`;
+		document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
+		document.getElementById("guessRemain").innerHTML = `<p>${lives}</p>`;
+		gameStatus = 1;
+		lives = 5;
+		letters = [];
 		console.log(gameStatus);
 	} else {
 		var playerChoice = event.key;
-		var indexOfPlayerChoice = wordString.indexOf(playerChoice);
-	
+		var indexOfPlayerChoice = wordArray.indexOf(playerChoice);
 			if (indexOfPlayerChoice > -1) {	
-				displayString[indexOfPlayerChoice] = playerChoice;
-				var currentDisplay = displayString.join("");
-				document.getElementById("display").innerHTML = `<h2>${currentDisplay}</h2>`;			
+				displayArray[indexOfPlayerChoice] = playerChoice;
+				var currentDisplay = displayArray.join("");
+				letters.push(playerChoice)
+				document.getElementById("display").innerHTML = `<p>${currentDisplay}</p>`;
+				document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
+ 			} else {
+ 				if (lives > 0) {
+ 				lives = lives - 1;
+ 				console.log(lives);
+ 				document.getElementById("guessRemain").innerHTML = `<p>${lives}</p>`;
+ 				} else { 
+ 					gameStatus = 0;}
  			}
- 			if (indexOfPlayerChoice === -1) {
- 				console.log("wrong choice");
- 			}
+ 		}
 	}
-}
+
+
+
