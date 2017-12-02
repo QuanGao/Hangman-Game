@@ -24,12 +24,16 @@ function GetIndexes (array, value) {
 	};
 	return(indexes);
 } 
+function ReplaceByIndexes (array, value, arrayID) {
+	for(i = 0, i < arrayID.lenght, i++) {
+		array[arryID[i]] = array
+	}
+}
 
 
 // when key is pressed, game start.
 // computer chose a word and display blanks (dashes) same length as the word 
-document.onkeyup = function(event) {
- 		
+document.onkeyup = function(event) {		
 	console.log(gameStatus)
 	if (gameStatus === 0) {
 		document.getElementById("display").innerHTML = `<p>${currentBlank}</p>`;
