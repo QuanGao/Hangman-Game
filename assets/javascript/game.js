@@ -37,6 +37,11 @@ document.onkeyup = function(event) {
 				letters.push(playerChoice)
 				document.getElementById("display").innerHTML = `<p>${currentDisplay}</p>`;
 				document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
+				var indexOfDash = currentDisplay.split("").indexOf("-")
+					if (indexOfDash == -1) {
+						currentScore = currentScore + 1;
+						document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
+					}
  			} else {
  				if (lives > 0) {
  				lives = lives - 1;
