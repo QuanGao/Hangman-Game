@@ -16,11 +16,17 @@ h1 {
 
 .container-fluid {
 	font-family: 'Concert One', cursive;
+	padding-bottom: 10px;
+}
+
+.content {
+	display: flex;
 }
 
 .pics,.core {
 	border: 2px dashed white;
 	height: auto;
+	flex: 1;
 }
 
 .core {
@@ -36,7 +42,12 @@ h1 {
 }
 
 .record {
-	height: 50px;
+	height: 40px;
+}
+
+#progress {
+	height: 70px;
+	word-wrap: break-word;
 }
 
 .hint img {
@@ -49,12 +60,7 @@ h1 {
 	width: 70%;
 }
 
-.content {
-	display: flex;
-}
-.core,.pics {
-	flex: 1;
-}
+
 
 
 
