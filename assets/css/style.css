@@ -1,9 +1,10 @@
 body {
 	color: white;
-	background-image: url(/Users/quangao/code/Hangman-Game/assets/images/congruent_outline.png);
+	background-image: url(../images/congruent_outline.png);
 	padding-top: 5px;
 	text-align: center;
 	padding-top: 5px;
+	font-size: 22px;
 }
 
 h1 {
@@ -11,13 +12,15 @@ h1 {
 	font-size: 55px;
 }
 
+.core h2, .core h3 {
+	font-style: italic;
+}
+
 .container-fluid {
-	padding-top: 5px;
 	font-family: 'Concert One', cursive;
 }
 
 .pics,.core {
-	padding-top: 15px;
 	border: 2px dashed white;
 	height: 570px;
 }
@@ -30,25 +33,17 @@ h1 {
 	border-left: 1px dashed white;
 }
 
-#score,  #display, #guessRemain, #progress {
+.record {
 	height: 50px;
-	font-size: 22px;
 }
 
-.start {
-	height: 120px;
+.hint img {
+	width: 200px;
 }
 
-.start,.item {
-	font-style: italic;
-	
-}
+.heroIcon img {
 
-.item {
-	font-style: italic;
-	font-size: 24px;	
 }
-
 
 
 

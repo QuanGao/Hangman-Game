@@ -1,6 +1,6 @@
 // variables
-var words = ["spiderman","punisher","daredevil","hulk","deadpool","batman",
-"wonderwoman","catwoman","greenarrow","flash"];
+var words = ["batman","joker","flash","superman","catwoman","ironman","loki","punisher","deadpool","daredevil",
+	"wolverine","spiderman"];
 var gameStatus = 0;
 var currentScore = 0;
 var lives = 5;
