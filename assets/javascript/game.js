@@ -1,20 +1,25 @@
 // variables
-var words = ["batman","joker","flash","superman","catwoman","ironman","loki","punisher","deadpool","daredevil",
+var words = ["batman","joker","flash","superman","wonderwoman","ironman","thor","punisher","deadpool","daredevil",
 	"wolverine","spiderman"];
+var icons = ["batman.svg","joker.svg","flash.svg","superman.svg","wonderwoman.svg","ironman.svg","thor.svg",
+"punisher.svg","deadpool.svg","daredevil.svg","wolverine.svg","spidy.svg"];
 var gameStatus = 0;
 var currentScore = 0;
 var lives = 5;
 var letters = [];
 var currentWord = "";
 var blank = [];
-var currentBlank = ""; 
+var currentBlank = "";
+var displayIcon = ""; 
 
 document.onkeyup = function(event) {
 	var playerChoice = event.key;		
 	if (gameStatus === 0) {
 		select = Math.floor(Math.random()*words.length);
 		currentWord = words[select];
+		displayIcon = icons[select];
 		console.log(currentWord);
+		console.log(displayIcon);
 		blank = [];
 		currentBlank = ""; 
 		for(i = 0; i < currentWord.length; i++){
@@ -51,10 +56,11 @@ document.onkeyup = function(event) {
 					alert("YOU WIN YOU GENIUS!");
 					currentScore = currentScore + 1;
 					document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
+					document.getElementById("icons").innerHTML = `<img src = "assets/images/${displayIcon}">`;
 					gameStatus = 0;	
 			};
 		} else {
-			alert("you lose!");
+			alert("Better luck next time!");
 			gameStatus = 0;
 		};
 	};

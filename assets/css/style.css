@@ -1,9 +1,7 @@
 body {
 	color: white;
 	background-image: url(../images/congruent_outline.png);
-	padding-top: 5px;
 	text-align: center;
-	padding-top: 5px;
 	font-size: 22px;
 }
 
@@ -22,15 +20,19 @@ h1 {
 
 .pics,.core {
 	border: 2px dashed white;
-	height: 570px;
+	height: auto;
+}
+
+.core {
+	border-left: 1px dashed white;
 }
 
 .pics {
 	border-right: 1px dashed white;
 }
 
-.core {
-	border-left: 1px dashed white;
+.pics h2 {
+	margin-top: 40px;
 }
 
 .record {
@@ -38,16 +40,21 @@ h1 {
 }
 
 .hint img {
-	width: 200px;
+	width: 80%;
+	margin-top: 40px;
+	margin-bottom: 50px;
 }
 
 .heroIcon img {
-
+	width: 70%;
 }
 
-
-
-
+.content {
+	display: flex;
+}
+.core,.pics {
+	flex: 1;
+}
 
 
 
