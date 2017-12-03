@@ -14,11 +14,14 @@ document.onkeyup = function(event) {
 	if (gameStatus === 0) {
 		select = Math.floor(Math.random()*words.length);
 		currentWord = words[select];
-		console.log(currentWord);		
+		console.log(currentWord);
+		blank = [];
+		currentBlank = ""; 
 		for(i = 0; i < currentWord.length; i++){
 			blank.push("-");
-		};
+		};	
 		currentBlank = blank.join("");
+		console.log(currentBlank);
 		document.getElementById("display").innerHTML = `<p>${currentBlank}</p>`;
 		document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
 		lives = 5;
