@@ -2,22 +2,23 @@
 // variables
 var words = ["spiderman","punisher","daredevil","hulk","deadpool","batman",
 "wonderwoman","catwoman","greenarrow","flash"];
-var blanks = []
-
 var gameStatus = 0;
 var currentScore = 0;
 var lives = 5;
 var letters = [];
-var currentWord = words[-1];
-var currentBlank = blanks[-1];
- 
+var currentWord = "";
+var blank = [];
+var currentBlank = ""; 
 
 document.onkeyup = function(event) {
 	var playerChoice = event.key;		
 	if (gameStatus === 0) {
 		select = Math.floor(Math.random()*words.length);
-		currentWord = words[select];
-		currentBlank = blanks[select];	
+		currentWord = words[select];		
+		for(i = 0; i < currentWord.length; i++){
+			blank.push("-");
+		}
+		currentBlank = blank.join("");
 		document.getElementById("display").innerHTML = `<p>${currentBlank}</p>`;
 		document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
 		lives = 5;

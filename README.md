@@ -6,7 +6,8 @@ Punisher:			Frank Castle;
 Daredevil:			Matthew Murdock;  
 Hulk:				Bruce Banner;
 Deadpool:			Wade Wilson;
-	
+
+spiderman,punisher,daredevil,hulk,deadpool,batman,wonderwoman,catwoman,greenarrow,flash
 	
 DC heroes/villain:
 Batman:			Bruce Wayne;

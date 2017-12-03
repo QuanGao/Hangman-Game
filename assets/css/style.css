@@ -1,11 +1,33 @@
 body {
-	background: black;
 	color: white;
+	background-image: url(/Users/quangao/code/Hangman-Game/assets/images/congruent_outline.png);
+	padding-top:10px;
 }
 
 h1 {
 	text-align: center;
+	font-family: 'Vollkorn SC', serif;
+	font-size: 50px;
 }
+
+.container-fluid {
+	position: relative;
+	top: 10px;
+}
+
+.pics,.core {
+	border: 2px dashed white;
+	height: 550px;
+}
+
+.pics {
+	border-right: 1px dashed white;
+}
+
+.core {
+	border-left: 1px dashed white;
+}
+
 #score, #display, #guessRemain, #progress{
 	height: 30px;
 	border: 2px solid blue;
