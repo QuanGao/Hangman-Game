@@ -5,7 +5,7 @@ var icons = ["batman.svg","joker.svg","flash.svg","superman.svg","wonderwoman.sv
 "punisher.svg","deadpool.svg","daredevil.svg","wolverine.svg","spidy.svg"];
 var gameStatus = 0;
 var currentScore = 0;
-var lives = 20;
+var lives = 10;
 var letters = [];
 var currentWord = "";
 var blank = [];
@@ -29,7 +29,7 @@ document.onkeyup = function(event) {
 		console.log(currentBlank);
 		document.getElementById("display").innerHTML = `<p>${currentBlank}</p>`;
 		document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
-		lives = 20;
+		lives = 10;
 		document.getElementById("guessRemain").innerHTML = `<p>${lives}</p>`;
 		letters = [];	
 		document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
