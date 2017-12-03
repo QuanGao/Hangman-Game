@@ -23,8 +23,7 @@ document.onkeyup = function(event) {
 		letters = [];	
 		document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
 		gameStatus = 1;	
-	}
-	if(gameStatus === 1 && letters.indexOf(playerChoice) === -1) {
+	} else if(gameStatus === 1 && letters.indexOf(playerChoice) === -1) {
 		if(lives > 0){
 			var wordArr = currentWord.split("");
 			var blankArr = currentBlank.split("");
@@ -35,26 +34,25 @@ document.onkeyup = function(event) {
 					count++;
 					currentBlank = blankArr.join("");
 					document.getElementById("display").innerHTML = `<p>${currentBlank}</p>`
-				}
-			}
-			if(count > 0){
+				};
+			};
+			if(count === 0){
+				lives = lives - 1;
+				document.getElementById("guessRemain").innerHTML = `<p>${lives}</p>`;
+			} else {
 				letters.push(playerChoice);
 				document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
-				if(currentBlank.indexOf("-") === -1){
+				if(currentBlank.indexOf("-") === -1){					
 					alert("YOU WIN YOU GENIUS!");
-					score = score + 1;
-
-				}
-			} else {
-				lives = lives -1;
-				document.getElementById("guessRemain").innerHTML = `<p>${lives}</p>`;
-			}
+					currentScore = currentScore + 1;
+					document.getElementById("score").innerHTML = `<p>${currentScore}</p>`;
+					gameStatus = 0;};	
+			};
 		} else {
 			alert("you lose!");
-			gameStatus = 0
-		}
-
-	}
+			gameStatus = 0;
+		};
+	};
 }	
 	
 
