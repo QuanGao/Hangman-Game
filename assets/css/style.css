@@ -7,16 +7,21 @@ body {
 
 h1 {
 	font-family: 'Vollkorn SC', serif;
-	font-size: 55px;
+	font-size: 40px;
 }
 
-.core h2, .core h3 {
+.core h2 {
+	font-size: 24px;
 	font-style: italic;
+}
+
+.core h3 {
+	font-style: italic;
+	font-size: 90%;
 }
 
 .container-fluid {
 	font-family: 'Concert One', cursive;
-	padding-bottom: 10px;
 }
 
 .content {
@@ -46,7 +51,7 @@ h1 {
 }
 
 #progress {
-	height: 70px;
+	height: 90px;
 	word-wrap: break-word;
 }
 
@@ -60,8 +65,18 @@ h1 {
 	width: 70%;
 }
 
+@media only screen and (min-width: 640px){
+	h1 {
+		font-size: 55px;
+	}
+	.core h2 {
+		font-size: 30px;
+	}
 
-
+	.core h3 {
+		font-size: 100%;
+	}
+}
 
 
 

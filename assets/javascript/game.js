@@ -1,6 +1,6 @@
 // variables
-var words = ["batman","joker","flash","superman","wonderwoman","ironman","thor","punisher","deadpool","daredevil",
-	"wolverine","spiderman"];
+var words = ["bruce wayne", "joker", "barry allen", "clark kent", "diana prince", "tony stark", "thor", "frank castle",
+"deadpool", "matthew murdock", "logan","peter parker"];
 var icons = ["batman.svg","joker.svg","flash.svg","superman.svg","wonderwoman.svg","ironman.svg","thor.svg",
 "punisher.svg","deadpool.svg","daredevil.svg","wolverine.svg","spidy.svg"];
 var gameStatus = 0;
@@ -23,7 +23,9 @@ document.onkeyup = function(event) {
 		blank = [];
 		currentBlank = ""; 
 		for(i = 0; i < currentWord.length; i++){
-			blank.push("-");
+			if(currentWord[i] === " ") {
+				blank.push(" ")
+			} else {blank.push("-")};		
 		};	
 		currentBlank = blank.join("");
 		console.log(currentBlank);
