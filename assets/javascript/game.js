@@ -4,6 +4,12 @@ var words = ["bruce wayne", "joker", "barry allen", "clark kent", "diana prince"
 "deadpool", "matthew murdock", "logan","peter parker"];
 var icons = ["batman.svg","joker.svg","flash.svg","superman.svg","wonderwoman.svg","ironman.svg","thor.svg",
 "punisher.svg","deadpool.svg","daredevil.svg","wolverine.svg","spidy.svg"];
+var gameStatus = 0;
+var currentScore = 0;
+var letters = [];
+var lives = 10;
+var currentBlank = [];
+var currentWord = "";
 
 // This function replace letters in a string (or an array) into an array of dashes while keeping the space between 2 or more words
 var dashed = function(phrase) {
@@ -27,13 +33,6 @@ function word(name, icon) {
 	this.dashes = (this.dashArr).join("");
 	this.icon = `assets/images/${icon}`
 };
-
-var gameStatus = 0;
-var currentScore = 0;
-var letters = [];
-var lives = 10;
-var currentBlank = [];
-var currentWord = "";
 
 document.onkeyup = function(event) {
 	var playerChoice = event.key;		
