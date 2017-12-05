@@ -1,20 +1,12 @@
 # Hangman-Game
 
-Marvels heroes/villain: 
-Spiderman:			Peter Parker;
-Punisher:			Frank Castle;
-Daredevil:			Matthew Murdock;  
-Hulk:				Bruce Banner;
-Deadpool:			Wade Wilson;
+Word selection includes hero/villain names from either marvel or DC comics.
 
-spiderman,punisher,daredevil,hulk,deadpool,batman,wonderwoman,catwoman,greenarrow,flash
-	
-DC heroes/villain:
-Batman:			Bruce Wayne;
-WonderWoman:	Dianna Prince;
-CatWoman:		Selina Kyle;
-GreenArrow:		Oliver Queen;
-Flash:			Barry Allen;
+Could be either real-life name or title/nickname in the story.
+
+If guess correctly, a picture of that character would appear on the left side.
+
+Good luck!
 
 	
 
