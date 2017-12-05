@@ -2,7 +2,7 @@
 // define variables
 var words = ["bruce wayne", "joker", "barry allen", "clark kent", "diana prince", "tony stark", "thor", "frank castle",
 "deadpool", "matthew murdock", "logan","peter parker"];
-var icons = ["batman.svg","joker.svg","flash.svg","superman.svg","wonderwoman.svg","ironman.svg","thor.svg",
+var icons = ["batman.svg","joker.svg","flash.svg","superman.png","wonderwoman.svg","ironman.svg","thor.svg",
 "punisher.svg","deadpool.svg","daredevil.svg","wolverine.svg","spidy.svg"];
 var gameStatus = 0;
 var currentScore = 0;
