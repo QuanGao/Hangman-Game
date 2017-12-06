@@ -52,7 +52,7 @@ document.onkeyup = function(event) {
 		letters.push(playerChoice);
 		document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
 	// if there are guesses remain and guess corrently, replace dash with letter. if guess incorrectly, reduce guesses remain by 1
-		if(lives > 0) {
+		if(lives >= 0) {
 			var count = 0;
 			for (i = 0; i < currentWord.length; i ++) {
 				if((currentWord.nameArr)[i] === playerChoice) {
