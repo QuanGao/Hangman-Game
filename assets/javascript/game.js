@@ -64,6 +64,15 @@ document.onkeyup = function(event) {
 			if(count === 0){
 				lives = lives - 1;
 				document.getElementById("guessRemain").innerHTML = `<p>${lives}</p>`;
+					if(lives <= 0) {
+						// delay the alert so the score change first
+						setTimeout(function () {
+						   	alert("Better luck next time!");
+							}, 100);
+						document.getElementById("display").innerHTML = `<p>${currentWord.name}</p>`;
+						document.getElementById("icons").innerHTML = `<img src = ${currentWord.icon}>`;
+						gameStatus = 0;
+					};
 		// if all dashes have been replaced, you win and add one to "win"
 			}  else if((currentWord.dashArr).indexOf("-") === -1){						
 					alert("YOU WIN YOU GENIUS!");
@@ -73,15 +82,14 @@ document.onkeyup = function(event) {
 					gameStatus = 0;	
 			};
 	// if you use all guesses and didn't finish the word, you lose.
-		} else {
-			alert("Better luck next time!");
-			document.getElementById("display").innerHTML = `<p>${currentWord.name}</p>`;
-			document.getElementById("icons").innerHTML = `<img src = ${currentWord.icon}>`;
-			gameStatus = 0;
+		// } else {
+
 		};
 
 	};
+
 };
+
 
 
 
