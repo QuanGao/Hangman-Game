@@ -26,15 +26,19 @@ var dashed = function(phrase) {
 // Create object prototype that can turn any selected word into object.
 function word(name, icon) {
 	this.name = name;
-	this.nameArr = name.split("");
 	this.length = name.length;
 	this.dashArr = dashed(name);
 	this.dashes = (this.dashArr).join("");
 	this.icon = `assets/images/${icon}`
 };
 
+// create function to test whether input is letters
+function isLetter(x){
+	return(/^[a-zA-Z]$/.test(x))
+}
+
 document.onkeyup = function(event) {
-	var playerChoice = event.key;
+	var playerChoice = (event.key).toLowerCase();
 	// set all paramters at the begining of the game (gameStatus === 0)	and push the values to the html file.
 	if (gameStatus === 0) {
 		select = Math.floor(Math.random()*words.length);
@@ -48,14 +52,14 @@ document.onkeyup = function(event) {
 		document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
 		gameStatus = 1;	
 	// After game start (gameStatus === 1), only react when the letter of input (event.key) hasn't been pressed before  	
-	} else if(gameStatus === 1 && letters.indexOf(playerChoice) === -1) {
+	} else if(gameStatus === 1 && letters.indexOf(playerChoice) === -1 && isLetter(playerChoice)) {
 		letters.push(playerChoice);
 		document.getElementById("progress").innerHTML = `<p>${letters}</p>`;
 	// if there are guesses remain and guess corrently, replace dash with letter. if guess incorrectly, reduce guesses remain by 1
 		if(lives > 0) {
 			var count = 0;
-			for (i = 0; i < currentWord.length; i ++) {
-				if((currentWord.nameArr)[i] === playerChoice) {
+			for (i = 0; i < currentWord.length; i++) {
+				if((currentWord.name)[i] === playerChoice) {
 					currentWord.dashArr[i] = playerChoice;
 					count++;
 				};
@@ -67,8 +71,9 @@ document.onkeyup = function(event) {
 					if(lives <= 0) {
 						// delay the alert so the score change first
 						setTimeout(function () {
-						   	alert("Better luck next time!");
+							alert("Better luck next time!");
 							}, 100);
+						// show correct answer after alert.
 						document.getElementById("display").innerHTML = `<p>${currentWord.name}</p>`;
 						document.getElementById("icons").innerHTML = `<img src = ${currentWord.icon}>`;
 						gameStatus = 0;
@@ -87,7 +92,7 @@ document.onkeyup = function(event) {
 		};
 
 	};
-
+	
 };
 
 
