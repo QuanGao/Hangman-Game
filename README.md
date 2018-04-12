@@ -1,12 +1,15 @@
-# Hangman-Game
-
-*   Superhero themed hangman game.
-*   Could be hero's real name or hero name. You have 10 guesses each round.
-*   Handpicked cute hero icons appear after each round.
-*   Hint: the answer is not always Batman.
-*   Enjoy!
-
 	
+# [Hangman-Game](https://quangao.github.io/Hangman-Game/)
+
+### Press any key to start!
+![hangman](./gifs/hangman.gif)
+
+### Hints:
+* Word selection includes hero/villain names from either marvel or DC comics. :muscle:
+* Could be either real-life name or title/nickname in the story.
+* The answer is not always spidey 
+
+#### [Play](https://quangao.github.io/Hangman-Game/)
 
 
 
